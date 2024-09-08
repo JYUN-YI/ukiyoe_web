@@ -1,0 +1,365 @@
+/*=============================================
+=                  General                    =
+=============================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* .carousel-indicators li {
+    border-radius: 50%;
+} */
+
+/*=============================================
+=                  Navbar                     =
+=============================================*/
+
+.navbar {
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+}
+
+/*=============================================
+=                  Header                     =
+=============================================*/
+/* 加入背景圖片 */
+#header {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background-image: url("../img/000.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+/*=============================================
+=                  Intro                      =
+=============================================*/
+.intro-box {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: all .5s ease-out;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.intro-box:hover {
+    background: white;
+    box-shadow: 0px 22px 22px rgba(0, 0, 0, .25);
+}
+
+.intro-line {
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px auto;
+    transition: all .5s ease;
+}
+
+.intro-box:hover .intro-line {
+    width: 40px;
+}
+
+/*=============================================
+=                  Features                   =
+=============================================*/
+
+/*=============================================
+=                  Reviews                    =
+=============================================*/
+
+/*=============================================
+=                  Gallery                    =
+=============================================*/
+
+/* TODO: 設定Hover特效 */
+
+[id^='galleryImage'] {
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']>.gallery-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']:hover {
+    filter: grayscale(0%);
+}
+
+[id^='galleryImage']:hover>.gallery-text {}
+
+/* 放入背景圖片 */
+
+#galleryImage1 {
+    background-image: url('../img/gallery-image-1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/gallery-image-2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/gallery-image-3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/gallery-image-4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/gallery-image-5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/gallery-image-6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/gallery-image-7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/gallery-image-8.jpg');
+}
+
+/*=============================================
+=                  Start Now                  =
+=============================================*/
+
+/*=============================================
+=                   Footer                    =
+=============================================*/
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
+
+#goBackBtn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+/*=============================================
+=                   AD-BOX                    =
+=============================================*/
+
+.ad-box {
+    width: 300px;
+    position: fixed;
+    right: -275px;
+    bottom: 80px;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.ad-box.active {
+    right: 0px;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+}
+
+.ad-toggle-btn {
+    width: 25px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.ad-toggle-btn>i {
+    transform: rotateZ(90deg);
+}
+
+.ad-toggle-btn:hover {
+    color: #666;
+}
+
+.right-part {
+    padding: 10px;
+}
+
+.right-part>p {
+    margin-bottom: 0;
+}
+
+.info {
+    padding-bottom: 20px;
+}
+
+.contact-btn {
+    position: relative;
+    left: 60px;
+    border: none;
+    border-radius: 6px;
+    background: orange;
+    color: white;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    color: black;
+    background: yellow;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .2), 0 0 0 0px rgba(255, 99, 71, 0);
+    transition: all .3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 25px 20px rgba(0, 0, 0, .2), 0 0 0 3px rgba(255, 99, 71, 0);
+}
+
+.card-header>img {
+    display: block;
+    filter: brightness(1);
+    transition: all .3s ease;
+}
+
+.card:hover .card-header>img {
+    filter: brightness(1.2);
+}
+
+.card-body {
+    padding: 10px 10px;
+}
+
+.card-body h4,
+.card-body p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.card-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-btns {
+    position: absolute;
+    bottom: -200px;
+    right: 0px;
+    transition: all .3s cubic-bezier(0, 1.03, .15, 1.21);
+}
+
+/* setting the tag card-btns in the tag card after hovering the tag card */
+.card:hover .card-btns {
+    bottom: 0px;
+}
+
+.card-btns button {
+    color: red;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    opacity: .7;
+    transition: all .3s ease;
+    position: relative;
+    bottom: 0;
+}
+
+.card-btns button:hover {
+    opacity: 1;
+    bottom: 5px;
+
+}
+
+
+.p-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-img:hover {
+    transform: scale(1.5);
+    cursor: zoom-in;
+}
+
+.p-p {
+    margin-left: 1.5rem;
+}
+
+.qty {
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    border: 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+
+input.qtyplus {
+    width: 25px;
+    height: 35px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+}
+
+input.qtyminus {
+    width: 25px;
+    height: 35px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+}
+
+.collect-btn {
+    display: flex;
+}
+
+.share-btn {
+    display: block;
+}
+
+.p-page {
+    margin-top: 7%;
+}
+
+.login {
+    margin-top: 6%;
+}
